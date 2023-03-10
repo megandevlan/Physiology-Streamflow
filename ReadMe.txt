@@ -1,5 +1,5 @@
 Data: 
-* =  NOTE: Some of these files are too large to be stored on GitHub. Contact for direct access** 
+* =  NOTE: Some of these files are too large to be stored on GitHub. Contact for direct access and/or see data archived at http://portal.nersc.gov/archive/home/m/mdfowler/www/ and on Zenodo (https://zenodo.org/record/7716823#.ZAtL5i-B1qt)** 
 
 * fldare1161.nc -- raw output of flooded area for the first year of analysis in CaMa. Used to retrieve grid information.
 control_outflw.mat, full_outflw.mat, physiology_outflw.mat, radiation_outflw.mat -- Matlab data structures containing annual maximum runoff at every point from CESM experiments. 
@@ -14,13 +14,15 @@ lonIndices_subsetKey.txt, latIndices_subsetKey.txt -- indices of gridcells with 
 BasinMask.mat -- definitions of individual basins
 BasinMask_CESMres.mat -- definitions of individual basins at CESM resolution 
 * StreamflowAnnualExtremes.pkl -- percentages, max, min, and mean river discharges 
+* cam/clm .ho.Monthly*.nc files -- concatenated CESM output used to understand the underlying drivers of flood/streamflow changes. These are now archived on Zenodo here: https://zenodo.org/record/7716823#.ZAtL5i-B1qt
 
 
 Scripts:
 GEV_1000bootstrap.ipynb      -- Compute 1000 member bootstrap of GEV fit and determine significant changes of CTRL100 flood frequency. Create mask of drivers.This program is responsible for creating Figure 1, with the exception of resizing individual panels and added text labels, which were done in Adobe Illustrator. 
-RiverAnalysis.ipynb          -- Define peak and low flows globally. Creates data that gets used in Fig. 2.
-Figures_Jul17.ipynb          -- Create top panels of Fig. 2.     
-Streamflow_PatternCorr.ipynb -- Create latitudinal plots of streamflow, as in bottom panels of Fig. 2. 
-LinearityAnalysis.ipynb      -- Basin-level analysis of streamflow changes. Creates Fig. 3. 
-GRDC_validation.ipynb        -- Creates Fig. 4. 
+RiverAnalysis.ipynb          -- Define peak and low flows globally. 
+Streamflow_PatternCorr.ipynb -- Create latitudinal plots of streamflow, as in Fig. 2. 
+LinearityAnalysis.ipynb      -- Basin-level analysis of streamflow changes. Creates Fig. 4. 
+GRDC_validation.ipynb        -- Creates Fig. 5. 
+MeanStreamflowDistributions_V2.ipynb -- Creates top row of Fig. 3.
+RainFractionPlot.ipynb       -- Creates bottom row of Fig. 3. 
 
